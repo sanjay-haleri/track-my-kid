@@ -1,0 +1,7 @@
+{
+  "name": "track_my_kid",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
