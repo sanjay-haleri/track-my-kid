@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "track-my-kid-997cd": {
+      "hosting": {
+        "app": [
+          "track-my-kid-997cd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "track-my-kid-997cd"
+  }
+}

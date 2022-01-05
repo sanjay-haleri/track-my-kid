@@ -1,0 +1,49 @@
+.location_search_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .img_outer_wrapper {
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        .img_wrapper {
+            width: 60%;
+            aspect-ratio: 1/1;
+            // background-color: red;
+            border-radius: 50%;
+            animation: ripple 2s linear infinite;
+            .img_container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    max-width: 90%;
+                    height: auto;
+                 }
+            }
+           
+        }
+    }
+
+
+}
+
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0rem rgba(#5260ff, 0.2),
+                  0 0 0 0.5rem rgba(#5260ff, 0.2),
+                  0 0 0 1rem rgba(#5260ff, 0.2),
+                  0 0 0 2.5rem rgba(#5260ff, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 0.5rem rgba(#5260ff, 0.2),
+                  0 0 0 1rem rgba(#5260ff, 0.2),
+                  0 0 0 2.5rem rgba(#5260ff, 0.2),
+                  0 0 0 4rem rgba(#5260ff, 0);
+    }
+  }

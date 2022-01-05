@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  {
+    path: 'add-child',
+    loadChildren: () => import('./add-child/add-child.module').then( m => m.AddChildPageModule)
   }
 ];
 

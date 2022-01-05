@@ -24,3 +24,161 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import './app/utils/colors.scss';
+
+
+$widths: (100: 100%, 75: 75%, 50: 50%, 25: 25%, 10: 10%);
+$paddings: (0: 0px, 1: 6px, 2: 12px, 3: 16px, 4: 22px, 5: 26px, auto: auto);
+$textAlign: center, right, left;
+$fontWeights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@each $name, $value in $widths {
+  .w-#{$name} {
+    width: $value;
+  }
+}
+
+@each $name, $value in $paddings {
+    .p-#{$name} {
+      padding: $value;
+    }
+    .pt-#{$name} {
+        padding-top: $value;
+    }
+    .pb-#{$name} {
+        padding-bottom: $value;
+    }
+    .pr-#{$name} {
+        padding-right: $value;
+    }
+    .pl-#{$name} {
+        padding-left: $value;
+    }
+    .px-#{$name} {
+        padding-right: $value;
+        padding-left: $value;
+    }
+    .py-#{$name} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    // margin 
+    .m-#{$name} {
+        margin: $value !important;
+    }
+    .mt-#{$name} {
+        margin-top: $value !important;
+    }
+    .mb-#{$name} {
+        margin-bottom: $value !important;
+    }
+    .mr-#{$name} {
+        margin-right: $value !important;
+    }
+    .ml-#{$name} {
+        margin-left: $value !important;
+    }
+    .mx-#{$name} {
+        margin-right: $value !important;
+        margin-left: $value !important;
+    }
+    .my-#{$name} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+}
+  
+  @each $align in $textAlign {
+    .text-#{$align} {
+      text-align: $align;
+    }
+  }
+  @each $weight in $fontWeights {
+    .weight-#{$weight} {
+      font-weight: $weight !important;
+    }
+  }
+.color_grey {
+    color: $color-grey;
+    font-size: 13px;
+}
+.color_primary {
+    color: $color-primary;
+}
+
+.color_white {
+    color: white;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.user_type_container {
+    .mat-button-toggle-label-content {
+        line-height: 40px !important;
+    }
+}
+
+.children_container {
+    .child_container {
+        display: flex;
+        box-shadow: 2px 3px 13px 0px rgb(0 0 0 / 16%);
+        border-radius: 6px;
+        padding: 10px;
+        margin-bottom: 12px;
+        justify-content: space-between;
+    }
+    .profile {
+        display: flex;
+        img {
+            width: 50px;
+            max-width: 100%;
+            height: auto;
+        }
+        .name {
+            margin-left: 15px;
+            margin-top: 7px;
+            font-weight: 400;
+            font-family: 'Roboto';
+            font-size: 15px;
+            color: gray;
+        }
+    }
+    .status {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        .child_status {
+            .mat-primary {
+                color: #5260ff !important;
+            }
+            .mat-icon-button {
+                width: 30px !important;
+                height: 30px !important;
+                line-height: 30px !important;
+            }
+        }
+        .last_sync {
+            margin-bottom: 0px !important;
+        font-size: 11px;
+        color: gray;
+        div {
+            
+        width: 8px;
+        height: 8px;
+        background-color: #0ae20a;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 7px;
+    
+        }
+        }
+    }
+    
+    
+    }

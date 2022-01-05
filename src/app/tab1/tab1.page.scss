@@ -1,0 +1,17 @@
+.children_container .status {
+    justify-content: flex-end !important;
+}
+.no_child{
+    text-align: center;
+    color: #5260FF;
+    font-family: cursive;
+    font-size: 20px;
+    margin-top: 25px;
+}
+.no_children_container {
+    height: calc(100vh - 60px - 60px - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

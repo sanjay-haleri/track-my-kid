@@ -1,0 +1,26 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>request-location</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content  [fullscreen]="true">
+  <div class="location_search_container">
+
+    <div class="ml-auto">
+      <button mat-icon-button (click)="logout()"> <mat-icon>logout</mat-icon> </button>
+    </div>
+    
+   <div class="img_outer_wrapper">
+    <div class="img_wrapper">
+      <div class="img_container">
+        <img src="assets/images/location_search.svg" alt="">
+      </div>
+     </div>
+   </div>
+
+   <h3> {{isSynced ? 'Your location is synced...' : 'Getting your location...'}} </h3>
+  </div>
+
+</ion-content>

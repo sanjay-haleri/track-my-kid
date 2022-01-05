@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+      <button type="button" mat-icon-button routerLink="/tabs/tab1"> <mat-icon> arrow_back</mat-icon> </button>
+    </ion-buttons>
+    <ion-title>
+      {{childObject?.firstName}}
+
+      <span class="lastSync">{{childObject?.lastSync ? (childObject.lastSync | date:'dd-MM-yyyy hh:mm a') : 'N/A'}} <div></div> </span>
+    </ion-title>
+    <button mat-icon-button (click)="reload()" slot="end"> <mat-icon>sync</mat-icon> </button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div #map id="map"></div>
+</ion-content>

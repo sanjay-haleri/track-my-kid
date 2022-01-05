@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-title>Add Child</ion-title>
+    <ion-buttons slot="end">
+      <button mat-icon-button (click)="dismiss()" class="color_white"> 
+        <mat-icon>close</mat-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="m-3">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Search User</mat-label>
+      <input matInput [formControl]="searchUser" type="text" placeholder="Ex: user@email.com or sanjay haleri..."/>
+  </mat-form-field>
+
+  <div class="children_container">
+    <ng-container *ngFor="let child of allChildrenList">
+      <div class="child_container">
+        <div class="profile"> 
+          <img src="assets/images/profile.svg" (error)="$event.target.src='assets/images/profile.svg'">
+          <h4 class="name"> {{child.firstName}} {{child.lastName}} </h4>
+        </div>
+      
+        <div class="status">
+          <div class="child_status">
+            <button mat-icon-button color="primary" (click)="child.isAdded = !child.isAdded"> 
+              <mat-icon>
+                {{child.isAdded ? 'remove' : 'add'}}
+              </mat-icon>
+            </button>
+            </div>
+          <h5 class="last_sync"> <div></div> {{child.lastSync ? (child.lastSync | date:'dd-MM-yyyy hh:mm a') : 'N/A'}} </h5>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <button mat-raised-button (click)="saveChildren()" class="submit_btn" color="primary"> 
+        Submit
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

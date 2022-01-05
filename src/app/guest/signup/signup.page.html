@@ -1,0 +1,78 @@
+<ion-content>
+
+  <img src="assets/images/signup.svg" alt="" class="img-fluid p-2">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+    <ion-grid class="px-4">
+
+      <ion-row>
+        <ion-col>
+          <h1 class="mt-3 weight-500 color_primary">
+            Sign up
+          </h1>
+        </ion-col>
+        </ion-row>
+<ion-row>
+  <ion-col class="pb-3 user_type_container">
+    <mat-button-toggle-group  formControlName="userType">
+      <mat-button-toggle value="parent" color="primary">Parent</mat-button-toggle>
+      <mat-button-toggle value="student">Student</mat-button-toggle>
+      <mat-button-toggle value="teacher">Teacher</mat-button-toggle>
+    </mat-button-toggle-group>
+  </ion-col>
+</ion-row>
+
+      <ion-row>
+        <ion-col size="6" class="pb-0">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" type="text"/>
+            <mat-error *ngIf="firstName.hasError('required')">First Name is required...</mat-error>
+        </mat-form-field>
+        </ion-col>
+        <ion-col size="6" class="pb-0">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" type="text"/>
+            <mat-error *ngIf="lastName.hasError('required')">Last Name is required...</mat-error>
+        </mat-form-field>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="pb-0">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="text"/>
+            <mat-error *ngIf="email.hasError('required')">Email is required...</mat-error>
+            <mat-error *ngIf="email.hasError('email')">Pleas provide valid Email...</mat-error>
+        </mat-form-field>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="pb-0">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password"/>
+            <mat-error *ngIf="password.hasError('required')">Password is required...</mat-error>
+        </mat-form-field>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button mat-raised-button color="primary" class="w-100" type="submit"> Sign Up </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="color_grey text-center pt-3">
+          Already have an account ? <a routerLink="/login"> Please Login... </a>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+   
+
+
+</form>
+
+</ion-content>
