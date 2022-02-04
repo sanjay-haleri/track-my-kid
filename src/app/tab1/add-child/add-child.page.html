@@ -21,7 +21,8 @@
     <ng-container *ngFor="let child of allChildrenList">
       <div class="child_container">
         <div class="profile"> 
-          <img src="assets/images/profile.svg" (error)="$event.target.src='assets/images/profile.svg'">
+          <!-- (error)="$event.target.src='assets/images/profile.svg'" -->
+          <img src="assets/images/profile.svg" >
           <h4 class="name"> {{child.firstName}} {{child.lastName}} </h4>
         </div>
       

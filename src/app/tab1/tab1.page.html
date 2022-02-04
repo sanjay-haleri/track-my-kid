@@ -24,7 +24,8 @@
       <ng-container *ngFor="let child of addedChildrenList">
         <div class="child_container" [routerLink]="'/track-location/'+child.id">
           <div class="profile"> 
-            <img src="assets/images/profile.svg" (error)="$event.target.src='assets/images/profile.svg'">
+            <!-- (error)="$event.target.src='assets/images/profile.svg'" -->
+            <img src="assets/images/profile.svg" >
             <h4 class="name"> {{child.firstName}} {{child.lastName}} </h4>
           </div>
         
